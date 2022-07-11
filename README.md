@@ -9,5 +9,12 @@
 ## Git
 
 - [git 정리](./git%20%EC%A0%95%EB%A6%AC/Git%20%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC.md)
+<<<<<<< HEAD
 - [추가정리](./0707Git/%EC%A0%95%EB%A6%AC.md)
 
+=======
+
+## codeup 문제풀이
+
+- [codeup](./python)
+>>>>>>> 99fe420

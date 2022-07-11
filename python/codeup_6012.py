@@ -1,0 +1,6 @@
+a = input(1)
+b = input(2)
+a = int(a)
+b = int(b)
+print(a)
+print(b)
