@@ -18,3 +18,5 @@
 
 - [codeup](./python)
 >>>>>>> 99fe420
+
+- [파이썬실습문제풀이](./%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/)
