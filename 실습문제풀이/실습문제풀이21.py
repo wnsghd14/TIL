@@ -30,3 +30,8 @@ for i in range(case-1, -1, -1):
 
 for j in range(len(numlist)-1, -1, -1) :
     print(numlist[j], end='')
+
+# str 사용
+number = 123
+
+print(int(str(number)[::-1]))
