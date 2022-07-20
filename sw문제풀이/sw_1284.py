@@ -52,3 +52,12 @@ for i in range(1, T + 1) :
         print(b)
     else :
         print(a)
+
+for i in range(1, T + 1):
+    p, q, r, s, w = map(int, input().split())
+    a = w * p
+    if r > w:
+        b = q
+    else:
+        b = q + s(w * r)
+    print(f'#{i} {min(a, b)}')
