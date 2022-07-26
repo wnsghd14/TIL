@@ -16,4 +16,23 @@ for i in range(T):
             score = 0
         total += score
     print(total)
-            
+
+
+T = int(input())
+
+O = 'O'
+X = 'X'
+
+for t in range(T):
+    ox = input()
+    count_o = 0 # 연속된 O의 개수
+    sum_ = 0 # 점수의 총합
+
+    for answer in ox:
+        if answer == O:
+            count_o += 1 # 연속된 O의개수 1증가
+            sum_ = count_o + sum_
+        if answer == X:
+            count_o = 0 # 연속된 O의 개수를 초기화
+    
+    print(sum_)
