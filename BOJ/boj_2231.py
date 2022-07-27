@@ -8,3 +8,16 @@ for i in range(1, T + 1): # 모든 경우의 수 확인하기.
         break
     if i == T: # 도달시 0출력
         print(0)
+
+
+N = int(input())
+
+for number in range(1,N):
+    split_sum = 0
+
+    for digit in str(number):
+        split_sum += int(digit)
+    split_sum = split_sum + number
+
+    if N == split_sum:
+        print(number)
