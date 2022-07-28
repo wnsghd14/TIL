@@ -64,3 +64,32 @@ for i in people: # people 리스트 안의 키와 몸무게에서
         if i[0] < j[0] and i[1] < j[1]: # 각각을 비교하여 키, 몸무게 둘다 크다면
             ranking += 1 # 1씩을 더해주세요     
     print(ranking, end=" ")
+
+# 사람의 수 N 입력
+N = int(input())
+list_ = []
+rank_ =[0]*N
+#각 사람의 몸무게와 키 입력
+for i in range(N):
+    wei, hei = list(map(int, input().split()))
+# print(wei,hei)
+    list_.append((wei,hei))
+# print(list_)
+
+# 모든 사람을 비교하기위한 이중반복문
+for j in range(N):
+    # 기준이 되는사람
+    A = list_[j]
+    for a in range(N):
+        # 비교가 되는사람
+        B = list_[a]
+
+        # A가 B보다 덩치가 큰지 조건문이 필요
+        # B가 A 보다 덩치가 작다
+        if A[0] > B[0] and A[1] > B[1]:
+            # B보다 A가 덩치가 크다 +1
+            rank_[a] += 1
+           # print(A[0],B[0],A[1],B[1],rank_)
+print(rank_)
+for rank in rank_:
+    print(rank+1, end = '')
