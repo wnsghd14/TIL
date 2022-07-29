@@ -24,5 +24,6 @@
 
 ## Project
 
-- [1week](./1weeks-project/)
-- [2week](./2weeks_project/)
+- [1weeks](./1weeks-project/)
+- [2weeks](./2weeks_project/)
+- [3weeks](./3weeks_project/)
