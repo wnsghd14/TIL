@@ -24,12 +24,12 @@
 # 10
 # 각 수를 42로 나눈 나머지는 1, 2, 3, 4, 5, 6, 7, 8, 9, 10이다.
 
-list_ = [] # 리스트에 담아 그길이를 측정하고자 함.
+list_ = [] # 리스트에 담아 그 길이를 측정하고자 함.
 for i in range(10):# 10줄이랬으니.
-    N = int(input()) # 10개 받아주고
+    N = int(input()) # 입력값 받아주고
     list_.append(N % 42)# 리스트에 넣어준다.
-    # print(list_) # 정수가 나옴.
+    # print(list_) # 정수리스트가 나옴.
 set_list_ = set(list_) # 개중 중복값을 제거해주고
-print(len(set_list_)) # 길이를 출력하여 출력기댓값에 부응한다.
+print(len(set_list_)) # 길이를 출력한다.
 
     
