@@ -15,7 +15,7 @@
 - [oop](./Oop/)
 
 ## Algorithm
-
+- [Algorithm]
 - [codeup](./Codeup/)
 - [multicampus](./Multicampus/))
 - [swea](./Swea/)
@@ -27,3 +27,5 @@
 - [1weeks](./1weeks-project/)
 - [2weeks](./2weeks_project/)
 - [3weeks](./3weeks_project/)
+- [4weeks](./4weeks_project/)
+- [5weels](./5weeks_project/)
