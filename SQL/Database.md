@@ -8,8 +8,6 @@
 
 - 
 
-
-
 - 데이터베이스로 얻는 장점들
   
   - 데이터 중복 최소화(정확한 정보를 보장)
@@ -23,8 +21,6 @@
   - 표준화
   
   - 보안유지
-
-
 
 ## RDB
 
@@ -138,25 +134,25 @@
   
   - 테이블에서 데이터를 조회
   
-  - ESLECT 문은 SQLite 에서 가장 기본이 되는 문이며 다양한 절(clause)과 함께 사용
+  - SELECT 문은 SQLite 에서 가장 기본이 되는 문이며 다양한 절(clause)과 함께 사용
     
     - ORDER BY,DISTINCT,WHERE,LIMIT,GROUP BY
-
-- LIMIT
   
-  - 쿼리에서 반환되는 행수를 제한
+  - LIMIT
+    
+    - 쿼리에서 반환되는 행수를 제한
+    
+    - 특정 행부터 시작해서 조회하기 위해 OFFSET 키워드와 함께 사용하기도함
   
-  - 특정 행부터 시작해서 조회하기 위해 OFFSET 키워드와 함께 사용하기도함
-
-- WHERE
+  - WHERE
+    
+    - 쿼리에서 반환된 행에 대한 특정 검색 조건을 지정
   
-  - 쿼리에서 반환된 행에 대한 특정 검색 조건을 지정
-
-- SELECT DISTINCT
-  
-  - 조회결과에서 중복행을 제거
-  
-  - DISTINCT 절은 SELECT 키워드 바로뒤에 작성해야함
+  - SELECT DISTINCT
+    
+    - 조회결과에서 중복행을 제거
+    
+    - DISTINCT 절은 SELECT 키워드 바로뒤에 작성해야함
 
 - OFFSET
   
