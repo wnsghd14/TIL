@@ -17,7 +17,7 @@
 ## Algorithm
 
 - [codeup](./Codeup/)
-- [multicampus](./Multicampus/))
+- [multicampus](./Multicampus/)
 - [swea](./Swea/)
 - [BOJ](./BOJ/)
 - [programmers](./Programmers/)
