@@ -4,18 +4,18 @@
 ## Markdown
 
 - [마크다운](./Markdown/)
+
 ## Git
 
 - [git](./Git/)
-=======
+
 
 ## Python 
 
 - [python](./Python/) 
-- [oop](./Oop/)
 
 ## Algorithm
-- [Algorithm]
+
 - [codeup](./Codeup/)
 - [multicampus](./Multicampus/))
 - [swea](./Swea/)
