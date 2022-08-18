@@ -160,10 +160,6 @@
     
     - EX:LIMIT 2 2칸띄운 그이후 값이 나옴.
 
-
-
-
-
 - DELETE 
   
   - 쿼리에서 어떠한 요소를 지움.
@@ -174,7 +170,7 @@
 
 - UPDATE 
   
-  -  UPDATE 테이블 SET 컬럼=값 WHERE id
+  - UPDATE 테이블 SET 컬럼=값 WHERE id
   
   - 해당하는 id 가 중점. 해당하는 id의 값 을 바꿔주세요
   
@@ -297,3 +293,119 @@
     - ASC - 오름차순
     
     - DESC - 내림차순
+
+- 문자열 함수
+  
+  - SUBSTR(문자열,START,LENGTH): 문자열 자르기
+    
+    - 시작 인덱스는 1 , 마지막 인덱스는 -1
+  
+  - TRIM,LTRIM,RTRIM: 문자열 공백제거
+  
+  - LENGTH: 문자열 길이
+  
+  - REPLACE (문자열,패턴,변경값): 패턴에 일치하는 부분을 변경
+  
+  - UPPER,LOWER : 대소문자 변경
+  
+  - II : 문자열 합치기
+
+- 숫자 함수
+  
+  - ABS:절대 값
+  
+  - SIGN:부호
+  
+  - MOD(숫자1,숫자2): 숫자1을 숫자 2로 나눈 나머지
+  
+  - CEIL,FLOOR,ROUND: 올림,내림,반올림
+  
+  - POWER(숫자1,숫자2):숫자 1 숫자 2의 제곱
+  
+  - SQRT :제곱근
+
+- 집계함수 다시보기
+  
+  - 값 집합에 대한 계산을 수행하고 단일 값을 반환
+    
+    - 여러 행으로부터 하나의 결괏값을 반환하는 함수
+  
+  - SELECT 구문에서만 사용됨
+  
+  - 예시
+    
+    - 테이블 전체 행 수를 구하는 COUNT(*)
+    
+    - age 컬럼 전체 평균 값을 구하는 AVG(age)
+
+- ALIAS
+  
+  - 칼럼명이나 테이블명이  길거나 다른 명칭으로 확인하고 싶을 때는 ALIAS를 활용
+  - AS 를 생략하여 공백으로 표현할 수 있음
+  - 별칭에 공백, 특수문자 등이 있는 경우 따움표로 묶어서 표기
+
+- GROUP BY
+  
+  - SELECT 문의 optional 절
+  
+  - 행 집합세어 요약 행 집합을 만듬
+  
+  - 선택된 행 그룹을 하나 이상의 열 값으로 요약행으로 만듬
+  
+  - 문장에 WHERE 절이 포함된 경우 반드시 WHERE 절 뒤에 작성해야함
+  
+  - 지정된 컬럼의 값이 같은 행들로 묶음
+  
+  - 집계함수와 활용하였을때 의미가 있음
+    
+    - (SELECT * FROM users GROUP BY LAST_NAME;) => X
+  
+  - 그룹화된 각각의 그룹이 하나의 집합으로 집계함수의 인수로 넘겨짐
+
+- HAVING
+  
+  - 집계함수는 WHERE 절의 조건식에서는 사용할 수 없음(실행 순서에 의해)
+    
+    - WHERE 로 처리하는 것이 GROUP BY 그룹화보다 순서상 앞서 있기 때문
+  
+  - 집계 결과에서 조건에 맞는 값을 따로 활용하기 위해서 HAVING 을 활용
+
+- SELECT 문장 입력 순서
+  
+  - SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY, LIMIT, OFFSET
+
+- SELECT 문장 실행 순서
+  
+  - FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY
+    
+    - FROM 테이블을 대상으로
+    
+    - WHERE 제약조건에 맞춰서 뽑아서
+    
+    - GROUP BY그룹화한다
+    
+    - HAVING 그룹중에조건과맞는것을
+    
+    - SELECT 조회하여
+    
+    - ORDER BY 정렬하고
+    
+    - LIMIT,OFFSET 특정위치의 값을 가져온다.
+
+- ALTER TABLE
+  
+  - 테이블 이름 변경: 
+    
+    - ALTER TABLE table_name RENAME TO new_name;
+  
+  - 새로운 COLUMN 추가: 
+    
+    - ALTER TABLE table_name ADD COLUMN column definition;
+  
+  - COLUMN 이름 수정: 
+    
+    - ALTER TABLE table_name RENAME COLUMN current_name TO new_name;
+  
+  - CLOLUMN 삭제:
+    
+    - ALTER TABLE table_name DROP COLUMN column_name;
