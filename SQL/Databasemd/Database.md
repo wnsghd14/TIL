@@ -447,3 +447,23 @@
   - 다중행 비교 연산자와 함께 사용(IN,EXISETS 등)
 
 - 다중컬럼 서브쿼리
+
+### Join
+
+- 관계형 데이터 베이스의 가장 큰 장점이자 핵심적인 기능
+
+- 일반적으로 데이터 베이스 에는 하나의 테이블에 많은 데이터를 저장하는 것이 아니라 여러 테이블로 나눠 저장하게 되며, 여러 테이블을 결합(JOIN)하여 출력하고 활용
+
+- 일반적으로 레코드는 기본키(pk)나 외래키(FK)값의 관계에 의해 결합함.
+
+##### INNER JOIN
+
+- 조건에 일치하는 행만 반환
+  
+  - SELECT * FROM TABLE1 [INNER] JOIN TABLE2 ON TABLE1.COLUMN = TABLE2.COLUMN;
+  
+  - ​SELECT * FROM users JOIN role ON users.role_id = role.id;
+  
+  - SELECT * FROM user JOIN role ON users.role_id = role.id ORDER BY users.name DESC;
+  
+  - SELECT * FROM articles LEFT OUTER JOIN users ON articles.user_id = users.id WHERE articles.user_id IS NOT NULL;
