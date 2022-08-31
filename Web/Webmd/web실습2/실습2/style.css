@@ -1,0 +1,42 @@
+/* 아래에 CSS를 작성해주세요. */
+body, h3, p {
+  margin: 0;
+}
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+.card img {
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.content {
+  padding: 0 20px;
+}
+.content p:first-child {
+  color: #828282;
+  font-size: 13px;
+  font-weight: 200;
+}
+.content h3 {
+  font-size: 15px;
+  font-weight: 400;
+}
+.content p {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+.emp {
+  color: #50C8FF;
+  margin-right: 5px;
+}
+.review {
+  color: #c8c8c8;
+  margin-left: 5px;
+}

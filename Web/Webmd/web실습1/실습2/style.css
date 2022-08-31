@@ -1,0 +1,25 @@
+/* 아래에 CSS를 작성해주세요. */
+
+.item {
+  width: 300px;
+  border-radius: 3%;
+  align-items: center;
+}
+.word1 {
+  padding-top: 5px;
+  margin: 0px;
+  color: gray;
+}
+.word2 {
+  padding-left: 15px;
+  padding-top: 5px;
+  margin: 0px;
+  font-size: 11pt;
+}
+.word3 {
+  margin: 0px;
+  font-size: 18pt;
+}
+.word4{
+  color: #7cd2f5;
+}
