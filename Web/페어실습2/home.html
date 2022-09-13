@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#"
+          ><img src="./images/logo.png" width="100" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="hvr nav-link active text-white menu-margin"
+                aria-current="page"
+                href="home.html"
+                >Home</a
+              >
+            </li>
+            <li class="hvr nav-item">
+              <a
+                class="nav-link text-white-50 menu-margin"
+                href="community.html"
+                >Community</a
+              >
+            </li>
+            <li class="nav-item log-in">
+              <button
+                type="button"
+                class="btn btn-dark text-white-50"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 배너 이미지 (캐러셀)-->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://dummyimage.com/1920x600/000/fff"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://dummyimage.com/1920x600/000/fff"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://dummyimage.com/1920x600/000/fff"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- 컨텐츠 제목 -->
+    <section class="container">
+      <h1 class="text-center my-5">Box Office</h1>
+      <div class="row g-3">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <a
+              class="card-url"
+              href="https://movie.naver.com/movie/bi/mi/basic.naver?code=17421"
+              target="_blank"
+            >
+              <img
+                src="images/movie1.jpg"
+                class="card-img-top hvr-img"
+                alt="..."
+              />
+            </a>
+            <div class="card-body movie_card">
+              <h5 class="card-title fw-bold">1. 쇼생크 탈출</h5>
+              <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <a
+              class="card-url"
+              href="https://movie.naver.com/movie/bi/mi/basic.naver?code=10048"
+              target="_blank"
+            >
+              <img
+                src="images/movie2.jpg"
+                class="card-img-top hvr-img"
+                alt="..."
+              />
+            </a>
+            <div class="card-body movie_card">
+              <h5 class="card-title fw-bold">2. 죽은 시인의 사회</h5>
+              <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <a
+              class="card-url"
+              href="https://movie.naver.com/movie/bi/mi/basic.naver?code=72054"
+              target="_blank"
+            >
+              <img
+                src="images/movie3.jpg"
+                class="card-img-top hvr-img"
+                alt="..."
+              />
+            </a>
+            <div class="card-body movie_card">
+              <h5 class="card-title fw-bold">3. 다크 나이트 라이즈</h5>
+              <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <a
+              class="card-url"
+              href="https://movie.naver.com/movie/bi/mi/basic.naver?code=97612"
+              target="_blank"
+            >
+              <img
+                src="images/movie4.jpg"
+                class="card-img-top hvr-img"
+                alt="..."
+              />
+            </a>
+            <div class="card-body movie_card">
+              <h5 class="card-title fw-bold">4. 그랜드 부다페스트 호텔</h5>
+              <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <a
+              class="card-url"
+              href="https://movie.naver.com/movie/bi/mi/basic.naver?code=101950"
+              target="_blank"
+            >
+              <img
+                src="images/movie5.jpg"
+                class="card-img-top hvr-img"
+                alt="..."
+              />
+            </a>
+            <div class="card-body movie_card">
+              <h5 class="card-title fw-bold">5. 그녀</h5>
+              <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <a
+              class="card-url"
+              href="https://movie.naver.com/movie/bi/mi/basic.naver?code=106360"
+              target="_blank"
+            >
+              <img
+                src="images/movie6.jpg"
+                class="card-img-top hvr-img"
+                alt="..."
+              />
+            </a>
+            <div class="card-body movie_card">
+              <h5 class="card-title fw-bold">6. 위대한 쇼맨</h5>
+              <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="text-center" style="font-size: 10px; font-weight: 500">
+      Web-bootstrap PJT, by joonhong,junhwan
+    </footer>
+  </body>
+</html>

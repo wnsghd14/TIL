@@ -1,0 +1,32 @@
+.movie_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width:992px) {
+  .for_pc {
+    display:none;
+  }
+}
+@media (min-width:992px) {
+  .for_mobile {
+    display:none;
+  }
+}
+.hvr:hover {
+  background-color:rgba(191, 191, 191, 0.2);
+}
+.hvr {
+  border-radius: 5px;
+}
+.log-in {
+  margin-top: 1.1px;
+  padding-left: 1px;
+}
+.menu-margin {
+  margin-left: 13px;
+}
+.hvr-img:hover {
+  transform: scale(1.03);
+}
