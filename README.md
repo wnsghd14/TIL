@@ -25,10 +25,17 @@
 ## Database(SQL)
 - [SQLite](./SQL/)
 
+## Web
+- [Web](./Web/)
+
 ## Project
 
-- [1weeks](./1weeks-project/)
-- [2weeks](./2weeks_project/)
-- [3weeks](./3weeks_project/)
-- [4weeks](./4weeks_project/)
-- [5weels](./5weeks_project/)
+- [1st](./1st-project/)
+- [2nd](./2nd_project/)
+- [3th](./3th_project/)
+- [4th](./4th_project/)
+- [5th](./5th_project/)
+- [6th](./Web/%ED%8E%98%EC%96%B4%EC%8B%A4%EC%8A%B5/)
+- [7th](./Web/%ED%8E%98%EC%96%B4%EC%8B%A4%EC%8A%B52/)
+- [8th]()
+
