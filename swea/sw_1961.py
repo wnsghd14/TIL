@@ -1,3 +1,6 @@
+import sys
+sys.stdin = open("./swea/input.txt","r")
+
 T=int(input())
 
 def rotated(a, N):
