@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .modal-overlay{
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      position: fixed;
+      color: wheat;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+    .active{
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <button id="modal-btn">모달 버튼</button>
+  <div id= 'modal-content'class="modal-overlay">modal
+    <!-- <button id="modal-cancel-btn">취소 버튼</button> -->
+  </div>
+  <script>
+    const modalBtn = document.querySelector('#modal-btn')
+    modalBtn.addEventListener('click',function(){
+      document.querySelector('#modal-content').classList.toggle('active')
+    })
+    // const modalCancelBtn = document.querySelector('#modal-cancel-btn')
+    // modalCancelBtn.addEventListener('click',function(){
+    //   document.querySelector('#modal-content').classList.toggle('active')
+    // })
+    const modalOverlay = document.querySelector('#modal-content')
+    modalOverlay.addEventListener('click',function(){
+      document.querySelector('#modal-content').classList.toggle('active')
+    })
+  </script>
+</body>
+</html>

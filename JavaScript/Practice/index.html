@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  <button id="btn">버튼</button>
+  <p id="counter">0</p>
+  <script>
+    //
+    let countNumber = 0;
+
+    // btn
+    const btn = document.querySelector('#btn')
+    console.log(btn)
+    // 함수 실행
+    btn.addEventListener('click',function(){
+      console.log('button click!')
+      // countNumber 를 증가시키고
+      // id counter 인걸 가져와서 값을 넣는다.
+      countNumber += 1
+      const counter = document.querySelector('#counter')
+      counter.innerText = countNumber
+    })
+  </script>
+</body>
+</html>
