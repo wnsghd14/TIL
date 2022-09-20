@@ -21,21 +21,25 @@
 # 테스트 케이스 t에 대한 결과는 “#t”을 찍고, 한 칸 띄고, 정답을 출력한다.
 # (t는 테스트 케이스의 번호를 의미하며 1부터 시작한다.)
 # 
-# 풀이 :  
+# 풀이 :  시간을 꽤나 잡아 먹음.
+# 우선 성적 리스트를 만든 후 index함수를 활용해서 점수값을 넣어준 리스트에서 K번째 학생의 점수가 해당되는 성적을 대입하여 출력해준다.
 import sys
 sys.stdin = open('./Swea/input.txt','r')
 T = int(input())
-grade = ['A+','A0','A-','B+','B0','B-','C+','C0','C-','D0']
+grade = ['A+','A0','A-','B+','B0','B-','C+','C0','C-','D0'] # 성적 리스트
 
 for tc in range(1,T+1):
   N,K = map(int,input().split())
-  t = N//10
-  lit = []
+
+  t = N // 10 # N의 값이 달라
+  lit = [] # 점수를 넣을 빈 리스트
+
   for i in range(N):
     a,b,c = map(int,input().split())
-    lit.append(((a*35)+(b*45)+(c*20))/100)
-  k = lit[K-1]
-  lit.sort(reverse=True)
+    lit.append(((a*35)+(b*45)+(c*20))/100) # float형태로 나오는거 자꾸 뭐 오류뜨고 난리길래 깔끔하게 해버렸다.
+    
+  k = lit[K-1] # 0부터 시작함을 항상 명심하자. sort 함수와 위치가 바뀌면 안된다!
+  lit.sort(reverse=True) # 내림차순으로 정렬함.
   result = lit.index(k) // t
-  
+  print(result)
   print(f'#{tc} {grade[result]}')

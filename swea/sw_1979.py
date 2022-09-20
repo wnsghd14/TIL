@@ -26,8 +26,8 @@
 
 # 퍼즐의 각 셀 중, 흰색 부분은 1, 검은색 부분은 0 으로 주어진다.
 
-# 행렬을 받아 가로와 세로에서 k의 길이만큼이 나와야 한다.
-# 그렇기 때문에 각 행렬의 인덱스에서의 값이 1인경우에 숫자 1을 더해주고 
+# 행렬을 받아 가로와 세로에서 k의 길이만큼만 나왔을때 result에 1을 더한다..
+# 행과 열에서 비교하여 1인경우에 cnt 1을 더해주고 
 # 만약 카운트값이 3에만 해당할 때 result 값에 1을 넣어준다.
 import sys
 sys.stdin = open('./Swea/input.txt','r')
@@ -36,20 +36,20 @@ T = int(input())
 
 for test_case in range(1, T + 1):
   N, K = map( int, input().split())
-  puzzle = [list(map(int, input().split())) for _ in range(N)]
+  puzzle = [list(map(int, input().split())) for _ in range(N)] # 행렬 만들기
   result = 0
   # 행 기준
   for i in range(N):
-    cnt = 0
-    for j in range(N):
-      if puzzle[i][j]==1:
-        cnt+=1
-      else:
-        if cnt == K:
-          result += 1
-        cnt = 0
-    if cnt == K:
-      result +=1
+    cnt = 0 # 값 초기화
+    for j in range(N): 
+      if puzzle[i][j] == 1: # 1일때
+        cnt+=1 # 채울 수에 1을 추가
+      else: # 1이 아닌 경우
+        if cnt == K: # cnt 가 3일때 0을 만난다묜
+          result += 1 # result를 바로 1 더해주고
+        cnt = 0 # 값 초기화
+    if cnt == K: # 고 전에 cnt 가 3이묜
+      result +=1 # result 1 추가 따잇
   # print(result)
   # 열 기준
   for j in range(N):

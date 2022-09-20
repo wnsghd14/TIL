@@ -1,0 +1,56 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.container{ /*가운데 위치할수있게 작성해준다.*/
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /*flex 아이템이 중앙에 위치할수있게 한다.*/
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 30px;
+  color: #454545;
+}
+.lotto{
+  text-align: center; /*버튼의 위치를 가운데로 잡아준다.*/
+}
+.numbers{ /* ball 이 보여질 테두리를 만들어 준다.*/
+  margin: 0 auto;
+  /* 테두리가 정가운데 위치할수있게 작성해준다. 이게없으면 왼쪽정렬이된다.*/
+  width: 450px; height: 60px;  
+  background-color: #c1bcbc38;
+  padding-right: 25px;
+  padding-left: 25px;
+  border-radius: 10px; /*테두리 둥글게 만들기*/
+  display: flex;
+  justify-content: flex-start; 
+  /* ball 을 왼쪽에서 하나씩 나올수있도록 정렬합니다. */
+  align-items: center; /* 로또 볼이 정사각형으로 출력될수있게 한다. */
+}
+.eachnum{ /* ball 모양을 만들어준다.*/
+  color: black;
+  font-size: 0.7em; 
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  /* ball 안의 숫자가 ball 중앙에 위치할수있게 한다. */
+  align-items: center;
+}
+button{
+  margin-top: 50px;
+  font-size: 0.5em;
+  width: 100px; height: 40px;
+  border-radius: 10px;
+  color: black;
+  background-color: #f8e61b;
+  cursor: pointer; /* 마우스를 올려놓았을때 마우스 커서의 모양이 바뀐다.*/
+}
+button:active{
+  font-size: 0.6em;
+  width: 105px; height: 42px; 
+  /*버튼을 눌렀을때 크기가 변경어서 역동적으로 보여지게한다.*/
+}
