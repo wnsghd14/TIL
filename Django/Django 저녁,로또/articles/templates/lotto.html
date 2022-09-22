@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0 auto;
+      padding-top: 100px;
+    }
+    .container{ 
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 30px;
+      color: #454545;
+    }
+    .lotto{
+      text-align: center; 
+    }
+    .numbers{
+      margin:1rem;
+      width: 450px; height: 60px;  
+      background-color: #c1bcbc38;
+      padding-right: 25px;
+      padding-left: 25px;
+      border-radius: 10px; 
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+    }
+    button{
+      margin-top: 50px;
+      font-size: 0.5em;
+      width: 100px; height: 40px;
+      border-radius: 10px;
+      color: black;
+      background-color: #f8e61b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lotto">
+        <h2>로또 당첨가즈아</h2>
+        <p>금주 당첨번호</p>
+        <div class="numbers">
+          {% for i in winning %}
+          <p>{{ i }},</p>
+          {% endfor %}
+          <p>+ 10</p>
+        </div>
+        <hr>
+        <hr>
+        <p>랜덤번호</p>
+        <div class="numbers">
+          {% for i in lottonum1 %}
+          <p>{{ i }}&nbsp;</p>
+          {% endfor %}
+          <p>{{winner1}}</p>
+        </div>
+        <div class="numbers">
+          {% for i in lottonum2 %}
+          <p>{{ i }}&nbsp;</p>
+          {% endfor %}
+          <p>{{winner2}}</p>
+        </div>
+        <div class="numbers">
+          {% for i in lottonum3 %}
+          <p>{{ i }}&nbsp;</p>
+          {% endfor %}
+          <p>{{winner3}}</p>
+        </div>
+        <div class="numbers">
+          {% for i in lottonum4 %}
+          <p>{{ i }}&nbsp;</p>
+          {% endfor %}
+          <p>{{winner4}}</p>
+        </div>
+        <div class="numbers">
+          {% for i in lottonum5 %}
+          <p>{{ i }}&nbsp;</p>
+          {% endfor %}
+          <p>{{winner5}}</p>
+        </div>
+    </div>
+</div>
+</body>
+<!-- - 버튼을 눌렀을 때 번호 6개를 추천하는 코드를 작성합니다.
+- 라이브 수업에서 진행된 코드를 참고하여 완성 시키세요.
+
+### 추가 기능 
+
+- 숫자별로 적절한 색상을 활용합니다.
+- 사용자에게 정보를 받아 주어진 수량의 번호를 한번에 제공합니다.
+- GitHub Pages 기능을 활용하여 배포합니다. -->
+<!--         <div class="numbers">
+          {% for i in lottonum %}
+          <p>{{ i }},</p>
+          {% endfor %}
+          +
+          <div>{{bonus}}</div> -->
+</html>
