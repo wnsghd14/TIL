@@ -38,14 +38,24 @@
 
 # (t는 테스트 케이스의 번호를 의미하며 1부터 시작한다.)
 
+# for 문에서 arr(M,M)부터 arr(2M,2M) 까지 합만을 더해주면 된다고 생각해서
+# 간단하게 풀어보려다가 완전히 낭패를 .. 
+# 하다보니 4중 포문 까지 가서야 해결완료!
+
 import sys
 sys.stdin = open('./Swea/input.txt','r')
 
-T = int(input())
-
+T=int(input())
 for tc in range(1,T+1):
-    N,K = map(int,input().split())
-
+    N,M = map(int,input().split())
     arr = [list(map(int,input().split())) for _ in range(N)]
-    chae = [[0]*K for _ in range(K)]
-    
+    result = 0
+    for i in range(N-M+1): # 시작 좌표
+        for j in range(N-M+1):
+            chae = 0
+            for t in range(i,i+M):# 끝 좌표
+                for k in range(j,j+M):
+                    chae += arr[t][k]
+            if chae > result:
+                result = chae
+    print(f'#{tc} {result}')
