@@ -19,15 +19,24 @@
 
 # (t는 테스트 케이스의 번호를 의미하며 1부터 시작한다.)
 
-#
+# 이틀 걸려 풀었당.
+# 한단어의 길이가 결국 연속이 되는 구조를 파악할 수가 있는데
+# 그렇다는건 스트링의 맨 첫번째 단어의 첫 글자와 새로 시작하는 똑같은 글자의
+# 첫번째 글자가 같을때 부터 +1을 해준것을 총 길이에서 빼주면 원하는 값을  도출가능하기때문에
+# 그렇게 짰다.
 import sys
 sys.stdin = open('./Swea/input.txt','r')
 
 T = int(input())
 
-for tc in range(1, T+1):
-  inputs = input()
-  temp = []
-  for i in inputs:
-    temp.append(i)
-  print(temp)
+for tc in range(1,T+1):
+  str = input() 
+  j = 0 # 시작값과 비교해야하기 때문에
+
+  for i in range(1, len(str)): #
+    if str[i] == str[j]: #
+      j += 1
+    else:
+      j = 0
+
+  print(f"#{tc} {len(str)-j}")
