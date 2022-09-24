@@ -10,9 +10,9 @@ for tc in range(1,T+1):
         if len(i) < 16:
             break
         if i[0] == '3' or i[0] == '4' or i[0] == '5' or i[0] == '6' or i[0] == '9':
-             cnt = 1
+            cnt = 1
         else:
-             cnt = 0
+            cnt = 0
     # print(cnt)
 
     print(f'#{tc} {cnt}')

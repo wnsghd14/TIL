@@ -7,12 +7,12 @@ for t in range(1,T+1):
         arr = list(map(int,input().split()))
         if arr[0] == 1:
             speed += arr[1]
- 
+
         elif arr[0] == 2:
             if speed > arr[1]: 
                 speed -= arr[1]
             else:
                 speed = 0
         move += speed
- 
+
     print('#{} {}'.format(t, move))

@@ -3,7 +3,7 @@ sys.stdin = open('./swea/input.txt')
 
 N = int(input()) # 전체 TC 갯수
 for i in range(N): # TC마다
-    M = int(input()) #배열의 길이 (안쓰임)
+    M = int(input()) #배열의 길이
     answer = 0 #출력할 정답
     arr = list(map(int, input().split())) #배열 입력 받기
     sellPrice = 0 #현재 판매가격(최댓값)

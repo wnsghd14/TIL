@@ -11,5 +11,5 @@ for tc in range(1,T+1):
         if max <= cnt[j]:
             max = cnt[j]
             grade = j
- 
+
     print('#{} {}'.format(tc, grade))
