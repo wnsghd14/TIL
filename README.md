@@ -28,6 +28,12 @@
 ## Web
 - [Web](./Web/)
 
+## JavaScript
+- [JS](./JavaScript/)
+
+## Django
+- [Django](./Django/)
+
 ## Project
 
 - [1st](./1st-project/)
