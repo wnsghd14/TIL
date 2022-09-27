@@ -8,3 +8,6 @@ print('kdt')
 
 lunch_box = ['라면', '김밥', '햄버거']
 print(lunch_box[0])  
+
+
+# 
