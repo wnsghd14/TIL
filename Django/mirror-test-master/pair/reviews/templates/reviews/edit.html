@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block content %}
+<div
+  class="container rounded-3 my-3"
+  style="
+    background-color: #f793b5;
+    padding: 1vw 2vw;
+    box-shadow: 2px 4px 8px 2px rgba(26, 26, 26, 0.098);
+  "
+>
+  <h1>🖤Edit Review🖤</h1>
+  <form action="{% url 'reviews:update' review.pk %}">
+    <div class="my-3">
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <input
+        name="title"
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        value="{{ review.title }}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Content</label
+      >
+      <textarea
+        name="content"
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+      >
+{{ review.content }}</textarea
+      >
+    </div>
+    <div class="text-center">
+      <input
+        type="submit"
+        class="btn"
+        value="Update"
+        style="background-color: skyblue"
+      />
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}" />
+<div
+  class="container text-start mt-5 py-3 rounded-3"
+  style="
+    background-color: #f793b5;
+    padding: 1vw 2vw;
+    box-shadow: 2px 4px 8px 2px rgba(26, 26, 26, 0.098);
+  "
+>
+  <h2 class="detail-title mb-3 rounded-3 p-1">{{ review.title }}</h2>
+  <hr style="color: white" />
+  <p class="detail-content rounded-3 p-1">{{ review.content }}</p>
+</div>
+<div class="text-center my-3">
+  <a href="{% url 'reviews:edit' review.pk %}" class="btn btn-edit me-3"
+    >Wanna Edit?</a
+  >
+  <a href="{% url 'reviews:delete' review.pk %}" class="btn btn-delete"
+    >❗Delete❗</a
+  >
+</div>
+{% endblock %}

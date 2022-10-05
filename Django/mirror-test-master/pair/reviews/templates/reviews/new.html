@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block content %}
+<div
+  class="container rounded-3 my-3"
+  style="
+    background-color: #f793b5;
+    padding: 1vw 2vw;
+    box-shadow: 2px 4px 8px 2px rgba(26, 26, 26, 0.098);
+  "
+>
+  <form action="{% url 'reviews:create' %}">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">title</label>
+      <input
+        name="title"
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >content</label
+      >
+      <textarea
+        name="content"
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+      ></textarea>
+    </div>
+    <div class="text-center">
+      <input
+        type="submit"
+        class="btn"
+        value="Click to Update"
+        style="background-color: skyblue"
+      />
+    </div>
+  </form>
+</div>
+{% endblock %}

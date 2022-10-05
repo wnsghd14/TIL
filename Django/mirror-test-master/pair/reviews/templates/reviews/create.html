@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+<div
+  class="container rounded-3 my-3"
+  style="
+    background-color: #f793b5;
+    padding: 1vw 2vw;
+    box-shadow: 2px 4px 8px 2px rgba(26, 26, 26, 0.098);
+  "
+>
+  <div class="container text-center my-3">
+    <h1 class="mb-3">Complete Review</h1>
+    <!-- <p>제목: {{ title }}</p>
+  <p>내용: {{ content }}</p> -->
+    <a
+      href="{% url 'reviews:index' %}"
+      class="btn"
+      style="background-color: skyblue"
+      >go to home</a
+    >
+  </div>
+</div>
+{% endblock %}
