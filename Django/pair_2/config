@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/MoonSanghee/pair_2.git
+	fetch = +refs/*:refs/*
+	mirror = true
+	pushurl = https://github.com/wnsghd14/pair2
