@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{% load static %}
+{% if request.user == user %}
+<a href="{% url 'accounts:update' request.user.pk %}">회원정보수정</a>
+{% endif %}
+
+<h1>{{ user.username }}님의 프로필</h1>
+<div class="col-lg-2 index-login-div text-center">
+    {%if user.tier == 1 %}
+    <img src="{% static 'images/t1.png' %}" height="100" width="100" alt="">
+    <h3>뇌까지 근육</h3>
+    <p> {{user.score}}점 </p>
+    
+
+    {%elif user.tier == 2 %}
+    <img src="{% static 'images/t2.png' %}" height="100" width="100" alt="">
+    <h3>고인물</h3>
+    <p>{{user.score}}점</p>
+
+    {%elif user.tier == 3 %}
+    <img src="{% static 'images/t3.png' %}" height="100" width="100" alt="">
+    <h3>헬창</h3>
+    <p>{{user.score}}점</p>
+
+    {%elif user.tier == 4 %}
+    <img src="{% static 'images/t4.png' %}" height="100" width="100" alt="">
+    <h3>쫌 치네</h3>
+    <p>{{user.score}}점</p>
+
+    {%elif user.tier == 5 %}
+    <img src="{% static 'images/t5.png' %}" height="100" width="100" alt="">
+    <h3>헬린이</h3>
+    <p>{{user.score}}점</p>
+
+    {%elif user.tier == 6 %}
+    <img src="{% static 'images/t6.png' %}" height="100" width="100" alt="">
+    <h3>일반인</h3>
+    <p>{{user.score}}점</p>
+
+    {%elif user.tier == 7 %}
+    <img src="{% static 'images/t7.png' %}" height="100" width="100" alt="">
+    <h3>재활용가능</h3>
+    <p>{{user.score}}점</p>
+
+    {%elif user.tier == 8 %}
+    <img src="{% static 'images/t8.png' %}" height="100" width="100" alt="">
+    <h3>폐급</h3>
+    <p>{{user.score}}점</p>
+    {%endif%}
+</div>
+
+
+{% if request.user != user %}
+
+<div>
+    <button><a class="text-decoration-none" href="{% url 'accounts:follow' user.pk %}">
+        {% if request.user in user.followings.all %}
+        <div> 
+            <p class="m-0">언팔로우</p>
+        </div>   
+        {%else%}
+        <div> 
+            <p class="m-0">팔로우</p>
+        </div>   
+        {%endif%}
+        </a></button>
+</div>
+{% endif %}
+
+
+
+<div class="text-start mt-3 text-white"><a>팔로워: {{user.followers.all.count}}</a></div>
+<div class="text-start mt-3 text-white"><a>팔로우: {{user.followings.all.count}}</a></div>
+
+
+
+
+<div class="row mt-3">
+    <div class="col-6">
+        <h3>내가 쓴 글 {{ user.article_set.count }}</h3>
+        {% for article in user.article_set.all %}
+        <p>
+            {{ forloop.counter }}
+            <a class="text-decoration-none" href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
+        </p>
+        {% endfor %}
+    </div>
+
+    <div class="col-6">
+        <h3>내가 쓴 댓글</h3>
+        {% for comment in user.comment_set.all %}
+        <p>
+            {{ forloop.counter }}
+            <a class="text-decoration-none" href="{% url 'articles:detail' comment.article.pk %}">
+                {{ comment.content}}
+            </a>
+            
+        </p>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+
+</script>
+
+{% endblock body %}

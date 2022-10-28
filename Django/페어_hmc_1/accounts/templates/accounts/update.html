@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load django_bootstrap5 %}
+{% block body %}
+
+
+<h1>유저회원정보수정</h1>
+
+<form action="" method="POST">
+
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    <input type="submit" class="btn btn-outline-primary">
+</form>
+
+{% endblock %}

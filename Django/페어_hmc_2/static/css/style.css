@@ -1,0 +1,51 @@
+.pokemon1 {
+    background-image: url(../images/1.jpg);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pokemon2 {
+    background-image: url(../images/2.jpg);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pokemon3 {
+    background-image: url(../images/3.jpg);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+
+}
+
+
+.bg-img {
+    background-image: url(../images/base.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.base-footer {
+    background-color: rgb(66, 66, 66);
+}
+
+.base-container-div {
+    background-color: rgb(78, 82, 82);
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
+
+.index-login-div {
+    background-color: rgb(206, 204, 200);
+    border-radius: 1rem;
+    padding: 15px;
+}
+
+a:hover{
+    color: aqua;
+}

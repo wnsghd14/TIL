@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    {% if searched %}        
+        <h1> 검색하신 {{ searched }} 정보입니다. </h1>
+        <br>
+        <h5>제목</h5>
+        {% for article in articles %}        
+            <a href="{% url 'articles:detail' article.pk %}" style="text-decoration:none;">{{ article.title }}</a><br>
+        {% endfor %}
+    {% else %} 
+        <h1> 검색창에 올바른 정보를 입력해주세요.</h1>
+    {% endif %}
+{% endblock %}

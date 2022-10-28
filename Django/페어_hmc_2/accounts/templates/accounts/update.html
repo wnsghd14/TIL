@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load django_bootstrap5 %}
+{% block body %}
+
+
+
+<div class="container" style="padding: 40px 30px;">
+<h1>회원정보수정</h1>
+<form action="" method="POST">
+
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    <button type="submit" class="btn btn-success">제출</button>
+</form>
+</div>
+{% endblock %}

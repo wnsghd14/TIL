@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+{% block body %}
+
+<h1> 글 읽기 </h1>
+
+<h2>{{ articles.title }} | <span>{{ articles.content }}</span></h2>
+
+<hr>
+<h4>댓글 |
+</h4>
+
+{% if request.user in article.like_users.all %}
+<button>
+    <div onclick="" id="like-btn" data-article-id="{{ articles.pk }}" class="pokemon1">
+    </div>
+</button>
+{% else %}
+<button>
+    <div id="like-btn" onclick="" data-article-id="{{ articles.pk }}" class="pokemon2">
+    </div>
+</button>
+{% endif %}
+<p>추천: <span id="like-count">{{ articles.like_users.count }}</span></p>
+<form action="{% url 'articles:comment' articles.pk %}" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form commentform %}
+    {% bootstrap_button button_type='submit' content="OK" %}
+</form>
+
+
+<hr>
+
+{% for comment in articles.comment_set.all %}
+
+<p>{{ comment.content }}</p>
+
+{% endfor %}
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    const likeBtn = document.querySelector('#like-btn')
+    likeBtn.addEventListener('click', function (event) {
+        console.log(event.target.dataset)
+        axios({
+            method: 'get',
+            url: `/articles/${event.target.dataset.articleId}/like/`
+        })
+            .then(response => {
+                console.log(response)
+                console.log(response.data)
+                if (response.data.isLiked === true) {
+                    event.target.classList.add('pokemon2')
+                    event.target.classList.remove('pokemon1')
+                } else {
+                    event.target.classList.add('pokemon1')
+                    event.target.classList.remove('pokemon2')
+                }
+                const likeCount = document.querySelector('#like-count')
+                likeCount.innerText = response.data.likeCount
+            })
+    })
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<a href="{% url 'accounts:update' request.user.pk %}">회원정보수정</a>
+<h1>{{ user.username }}</h1>
+<p>팔로우: 0</p>
+<p>팔로워: 0</p>
+
+
+
+
+<div class="row">
+    <div class="col-6">
+        <h3>내가 쓴 글 {{ user.article_set.count }}</h3>
+        {% for article in user.article_set.all %}
+        <p>
+            {{ forloop.counter }}
+            <a href="#">{{ article.title }}</a>
+        </p>
+        {% endfor %}
+    </div>
+
+    <div class="col-6">
+        <h3>내가 쓴 댓글</h3>
+        {% for comment in user.commnt_set.all %}
+        <p>
+            {{ forloop.counter }}
+            <a href="#">{{ comment.content }}</a>
+        </p>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock body %}

@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% block body %}
+<div class="container my-3">
+    <div class='row my-5 align-items-center'>
+        <div class="col-lg-10">
+            <table class="table mt-5" style="opacity: 0.9;">
+                <thead>
+                    <tr class="table-dark">
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if articles %}
+                    {% for article in articles %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>
+                            <a href="{% url 'articles:detail' article.pk %}" style="text-decoration:none; color:white;" class="a_hover">{{article.title }}</a>
+                        </td>
+                        <td>
+                        <a href="{% url 'accounts:detail' article.user.pk %}" style="text-decoration:none; color:white;" class="a_hover">{{article.user }}</a>
+                        </td>
+                        <td>{{ article.created_at }}</td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="3">질문이 없습니다.</td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+
+               <!-- 페이징처리 start-->
+            <ul class="pagination justify-content-center">
+                <!-- 이전페이지 -->
+                {% if articles.has_previous %}
+                <li class="page-item">
+                    <a href="?page={{ articles.previous_page_number }}" class="page-link">이전</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a href="#" class="page-link" tabindex="-1" aria-disabled="true">이전</a>
+                </li>
+                {% endif %}
+
+                <!-- 페이지 리스트-->
+                {% for page_number in articles.paginator.page_range  %}
+                {% if page_number >= articles.number|add:-5 and page_number <= articles.number|add:5 %}
+                {% if page_number == articles.number %}
+                <li class="page-item active" aria-current="page">
+                    <a href="?page={{ page_number }}" class="page-link">{{ page_number }}</a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <a href="?page={{ page_number }}" class="page-link">{{ page_number }}</a>
+                </li>
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+
+                <!-- 다음페이지-->
+
+                {% if articles.has_next %}
+                <li class="page-item">
+                    <a href="?page={{ articles.next_page_number }}" class="page-link">다음</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a href="#" class="page-link" tabindex="1" aria-disabled="true">다음</a></li>
+                {% endif %}
+            </ul>
+            <!-- 페이징처리 end-->
+
+            <div>
+                <a href="{% url 'articles:create' %}" class="btn btn-success">질문하기</a>
+            </div>
+            <!-- 간편 로그인 -->
+        </div>
+
+        {% if request.user.is_authenticated %}
+        <div class="col-lg-2 index-login-div text-center">
+            {%if user.tier == 1 %}
+            <img src="{% static 'images/t1.png' %}" height="100" width="100" alt="">
+            <h3>뇌까지 근육</h3>
+            <p> {{user.score}}점 </p>
+            
+
+            {%elif user.tier == 2 %}
+            <img src="{% static 'images/t2.png' %}" height="100" width="100" alt="">
+            <h3>고인물</h3>
+            <p>{{user.score}}점</p>
+
+            {%elif user.tier == 3 %}
+            <img src="{% static 'images/t3.png' %}" height="100" width="100" alt="">
+            <h3>헬창</h3>
+            <p>{{user.score}}점</p>
+
+            {%elif user.tier == 4 %}
+            <img src="{% static 'images/t4.png' %}" height="100" width="100" alt="">
+            <h3>쫌 치네</h3>
+            <p>{{user.score}}점</p>
+
+            {%elif user.tier == 5 %}
+            <img src="{% static 'images/t5.png' %}" height="100" width="100" alt="">
+            <h3>헬린이</h3>
+            <p>{{user.score}}점</p>
+
+            {%elif user.tier == 6 %}
+            <img src="{% static 'images/t6.png' %}" height="100" width="100" alt="">
+            <h3>일반인</h3>
+            <p>{{user.score}}점</p>
+
+            {%elif user.tier == 7 %}
+            <img src="{% static 'images/t7.png' %}" height="100" width="100" alt="">
+            <h3>재활용가능</h3>
+            <p>{{user.score}}점</p>
+
+            {%elif user.tier == 8 %}
+            <img src="{% static 'images/t8.png' %}" height="100" width="100" alt="">
+            <h3>폐급</h3>
+            <p>{{user.score}}점</p>
+            {%endif%}
+        </div>
+
+        {% else %}
+        <div class="col-lg-2 index-login-div " >
+            <form method="POST" action="{% url 'accounts:login' %}">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <button type="submit" class="btn btn-success">로그인</button>
+            </form>
+        </div>
+
+        <!-- 간편 로그인 end-->
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}

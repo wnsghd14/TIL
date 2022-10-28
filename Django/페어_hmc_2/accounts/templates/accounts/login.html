@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block body %}
+
+
+
+
+<div class="container" style="padding: 40px 30px;">
+
+    <div style="padding: 50px 300px;">
+        <h1>로그인페이지</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button type="submit" class="btn btn-success">로그인</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
