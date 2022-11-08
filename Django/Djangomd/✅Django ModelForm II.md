@@ -8,7 +8,7 @@
 > 6. Static files
 > 7. Django Bootstrap5
 >
-> 💡 Django ModelForm I 필기와의 차이점 :
+> 💡 Django ModelForm I 필기와의 차이점:
 >
 > - (CRUD 시작할때) 처음부터 ModelForm 활용해서 게시판 기능 구현
 > - CRUD 중에 D(삭제) 기능 추가 구현
