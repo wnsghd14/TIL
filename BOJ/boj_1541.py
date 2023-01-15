@@ -16,7 +16,6 @@ for i in range(len(input)):
     if i == len(input) - 1:
         arr.append(num)
 
-
 print(arr)
     
 for i in range(len(arr)):

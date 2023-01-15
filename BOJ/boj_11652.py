@@ -12,6 +12,8 @@
 #     if max(dic.values()) == dic[j]:
 #         lit.append(j)
 # print(min(lit))
+
+
 N= int(input())
 dic =dict()
 lit = list()
@@ -28,6 +30,8 @@ for k,v in lit1:
         max_ = v
         result = k
 print(result)
+
+
 # import heapq
 
 
