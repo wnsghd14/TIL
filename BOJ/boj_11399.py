@@ -1,8 +1,8 @@
 n = int(input())
-s = list(map(int, input().split()))
+t = list(map(int, input().split()))
 num = 0
-s.sort()
+t.sort()
 for i in range(n):
     for j in range(i + 1):
-        num += s[j]
+        num += t[j]
 print(num)
