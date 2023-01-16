@@ -1,5 +1,5 @@
 # 처음에는 
-# import sys, math
+# import sys
 
 
 # N,M = map(int,input().split())
@@ -44,7 +44,7 @@
 # 5가 몇번 나누어지는지
 # # 2가 몇번 나누어지는지
 # 확인후 2와 5를 세서 더하고 빼고 한다
-# 게중 가장 작은 수를 넣는다~
+# 개중 가장 작은 수를 넣는다~
 import sys
 input = sys.stdin.readline
 
