@@ -16,6 +16,7 @@ for i in range(len(input)):
     if i == len(input) - 1:
         arr.append(num)
 
+
 print(arr)
     
 for i in range(len(arr)):
@@ -33,16 +34,16 @@ for i in range(len(arr)):
 
 print(arr)
 
-res = int(arr[0])
+result = int(arr[0])
 for i in range(1, len(arr)):
     if i % 2 != 0:
         continue
     if i % 2 == 0 and arr[i - 1] == '+':
-        res += int(arr[i])
+        result += int(arr[i])
     elif i % 2 == 0 and arr[i - 1] == '-':
-        res -= int(arr[i])
+        result -= int(arr[i])
         
-print(res)
+print(result)
 
 
 # exp = input().split('-') #'-'를 기준으로 split해서 exp 리스트에 저장
