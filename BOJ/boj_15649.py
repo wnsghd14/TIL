@@ -1,28 +1,65 @@
-N, M = map(int, input().split())
+# N, M = map(int, input().split())
 
-num = [(i+1) for i in range(N)]
-check = [False] * N
+# num = [(i+1) for i in range(N)]
+# check = [False] * N
 
-arr = []
+# arr = []
 
-def dfs(cnt):
-    if(cnt == M):
-        print(*arr)
-        return
+# def dfs(cnt):
+#     if(cnt == M):
+#         print(*arr)
+#         return
     
-    for i in range(N):
-        if(check[i]):
-            continue
+#     for i in range(N):
+#         if(check[i]):
+#             continue
         
-        check[i] = True
-        arr.append(num[i])
-        dfs(cnt + 1)
-        arr.pop()
-        print(arr)
-        print(check)
-        check[i] = False
+#         check[i] = True
+#         arr.append(num[i])
+#         dfs(cnt + 1)
+#         arr.pop()
+#         print(arr)
+#         print(check)
+#         check[i] = False
         
-dfs(0)
+# dfs(0)
+
+import sys
+
+input = sys.stdin.readline
+
+def back():
+    if len(answer) == m:
+        print(*answer)
+        return
+    for i in range(1, n + 1):
+        if not i in answer:
+            answer.append(i)
+            back()
+            answer.pop()
+n, m = map(int, input().split())
+
+answer = []
+back()
+
+# 백트래킹 반드시해야해
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

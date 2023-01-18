@@ -1,30 +1,7 @@
-# N = int(input())
-
-# def dp(n):
-#     if n <= 1:
-#         return [[1, 1], [1, 0]]
-#     else:
-#         arr = dp(n//2)
-#         t0 = arr[0][0]*arr[0][0]+arr[0][1]*arr[1][0]
-#         t1 = arr[0][0]*arr[0][1]+arr[0][1]*arr[1][1]
-#         t2 = arr[1][0]*arr[0][0]+arr[1][1]*arr[1][0]
-#         t3 = arr[1][0]*arr[0][1]+arr[1][1]*arr[1][1]
-#         if n%2==0:
-#             return [[t0%10007, t1%10007], [t2%10007, t3%10007]]
-#         else:
-#             arr = [[t0%10007, t1%10007], [t2%10007, t3%10007]]
-#             t0 = arr[0][0]+arr[0][1]
-#             t1 = arr[0][0]
-#             t2 = arr[0][0]
-#             t3 = arr[1][0]
-#             return [[t0%10007, t1%10007], [t2%10007, t3%10007]]
-# print(dp(N)[0][0])
-
-
 n = int(input())
 
 arr = [0]*n 
-#list에 append하는 것보다 0으로 빈 list를 만든 뒤 값을 변경시키는 게 더 편하다
+
 def tyle(n):    
     if n == 1:
         arr[0] = 1
@@ -39,3 +16,7 @@ def tyle(n):
         return arr[n-1]
 
 print(tyle(n))
+# DP 점화식
+# 피보나치 수열
+# n 값이 뽑아주는 갯수의 합을 자꾸 더하면서 나아가는 수열
+# 함수형에 익숙해지려 노력중이다.
