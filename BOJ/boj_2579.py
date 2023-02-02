@@ -1,27 +1,18 @@
-n = int(input())
-s = [0] * (n + 1)
-d = [0] * (n + 1)
+import sys
 
-for i in range(1, n + 1):
-    s[i] = int(input())
+n = int(sys.stdin.readline())
+m = [0] * 301
 
-# 계단은 한 번에 한 개 or 두 개
-# 세 개 연속 X
-# 마지막 무조건 도착
+for k in range(n):
+    m[k] = int(sys.stdin.readline())
 
-if n == 1:
-    print(s[n])
+dp = [0] * 301 # 계단
+dp[0] = m[0] # 첫 번째 계단
+dp[1] = m[0] + m[1] # 두 번째 계단
+dp[2] = max(m[1] + m[2], m[0] + m[2]) # 연속으로 세 개의 계단을 밟는 경우와 두 계단을 한번에 오르는 경우를 비교
 
-elif n == 2:
-    print(s[1] + s[2])
+# 반복문을 통해 계단을 오른다.
+for i in range(3, n + 1):
+    dp[i] = max(dp[i - 3] + m[i - 1] + m[i], dp[i - 2] + m[i]) # 연속으로 세 개의 계단을 밟는 경우와 두 계단을 한번에 오르는 경우를 비교
 
-else:
-    d[1] = s[1]
-    d[2] = s[1] + s[2]
-    d[3] = max(s[2] + s[3], s[1] + s[3])
-
-
-    for i in range(4, n+1):
-        d[i] = max(d[i-3] + s[i] + s[i-1], d[i-2] + s[i])
-
-    print(d)
+print(dp[n - 1])
