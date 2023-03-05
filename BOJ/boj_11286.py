@@ -34,4 +34,4 @@ for i in range(x):
     elif N == 0 and len(heap) == 0:
         print(0) # 0이 연속적으로 나왔을땐 0을 출력하더라구요.
     else: 
-        print(heapq.heappop(heap)[1]) # heapq[1] 을 해보았다가 heappop을 쓰면 되겠구나 라고 생각하고 진행 했더니 되었습니다.
+        print(heapq.heappop(heap)[1])
