@@ -26,3 +26,5 @@
         ename like 'A_A' => 'A@_A
     5. Rownum(oracle) : (Where) Rownum = 1 포함
     6. Top(SQL server) : 
+
+5. 
