@@ -113,7 +113,7 @@
 
 ## 2과목
 
-**데이터 조작어(DML) **: SELECT, INSERT, UPDATE, DELETE
+**데이터 조작어(DML)**: SELECT, INSERT, UPDATE, DELETE
 
 **데이터 정의어(DDL)** : CREATE, ALTER, DROP, RENAME
 
