@@ -35,13 +35,8 @@
 - [Django](./Django/)
 
 ## Project
+- [1st](https://github.com/wnsghd14/semi_pjt_1-JMC-)
+- [2nd](https://github.com/wnsghd14/semi_pjt_1-Tripstar-)
+- [3th](https://github.com/wnsghd14/semi_pjt_1-RIP.GG-)
 
-- [1st](./Multicampus/1st-project/)
-- [2nd](./Multicampus/2nd_project/)
-- [3th](./Multicampus/3th_project/)
-- [4th](./Multicampus/4th_project/)
-- [5th](./Multicampus/5th_project/)
-- [6th](./Web/%ED%8E%98%EC%96%B4%EC%8B%A4%EC%8A%B5/)
-- [7th](./Web/%ED%8E%98%EC%96%B4%EC%8B%A4%EC%8A%B52/)
-- [8th](./Web/%ED%8E%98%EC%96%B4%EC%8B%A4%EC%8A%B53/)
 
